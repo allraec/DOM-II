@@ -43,8 +43,8 @@ navlinks.addEventListener("focusin", (event) =>{
 });
 
 //8
-window.addEventListener("resize", (event) => {
-    alert("Supersize ME!...")
+window.addEventListener("resize", () => {
+    alert("Supersize ME!...");
 });
 
 let pics = document.querySelectorAll(".img-content img");
