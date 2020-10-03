@@ -15,6 +15,7 @@ document.querySelectorAll('.nav-link').forEach(link => {
 const homeLink = document.querySelector(".nav-link");
 window.addEventListener("load", () => {
     homeLink.textContent = "Stay Home";
+    
 });
 
 //4
@@ -50,4 +51,22 @@ body.addEventListener("keyup", (e) => {
 //10
 window.addEventListener("copy", () => {
     alert("Copied to clipboard!");
+});
+
+//preventDefault task
+homeLink.href = "http://google.com";
+homeLink.addEventListener("click", (e) => {
+    e.preventDefault();
+});
+
+
+//stop propagation task
+const contentDestinationContainer = document.querySelector('.content-destination');
+contentDestinationContainer.addEventListener("click", (e) => {
+    e.target.style.border = "5px solid purple";
+});
+
+contentDestinationImg.addEventListener("click", (e) => {
+    e.target.style.opacity = ".5";
+    e.stopPropagation();
 });
