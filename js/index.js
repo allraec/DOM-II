@@ -28,8 +28,26 @@ const headerImg = document.querySelector('.intro img');
 headerImg.addEventListener("dblclick", (e) => {
     e.target.style.transform = "scale(3)";
 });
-
 headerImg.addEventListener("mouseleave", (e) => {
     e.target.style.transform = "scale(1)";
-})
+});
 
+//7
+const contentDestinationImg = document.querySelector('.content-destination img');
+contentDestinationImg.addEventListener("contextmenu", (e) => {
+    e.target.style.border = "5px solid orange";
+});
+
+//8 & 9
+const body = document.querySelector('html');
+body.addEventListener("keydown", (e) => {
+    e.target.style.backgroundColor = "lime";
+});
+body.addEventListener("keyup", (e) => {
+    e.target.style.backgroundColor = "yellow";
+});
+
+//10
+window.addEventListener("copy", () => {
+    alert("Copied to clipboard!");
+});
